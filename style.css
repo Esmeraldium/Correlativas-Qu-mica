@@ -1,45 +1,44 @@
 body {
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #f8f9fa;
+  font-family: sans-serif;
+  background: #f1f1f1;
   color: #333;
-  margin: 0;
-  padding: 0;
+  padding: 20px;
 }
 
-header {
-  background-color: #4b0082;
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+#malla {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.materia {
+  border-radius: 8px;
+  padding: 10px 12px;
+  width: 160px;
+  text-align: center;
+  background: #ccc;
+  cursor: pointer;
+  user-select: none;
+  transition: background 0.2s;
+}
+
+.materia[data-rendida=\"true\"] {
+  background: #6c6;
   color: white;
-  padding: 20px;
-  text-align: center;
 }
 
-main {
-  padding: 20px;
-  max-width: 800px;
-  margin: auto;
+.materia[data-habilitada=\"true\"] {
+  background: #fff;
+  border: 2px solid #6c6;
 }
 
-h2 {
-  border-bottom: 2px solid #ccc;
-  padding-bottom: 5px;
-  margin-top: 30px;
-  color: #4b0082;
-}
-
-.cuatrimestre {
-  margin-top: 10px;
-  padding-left: 10px;
-}
-
-ul {
-  list-style: square;
-  padding-left: 20px;
-}
-
-footer {
-  background-color: #eee;
-  text-align: center;
-  padding: 15px;
-  font-size: 0.9em;
-  margin-top: 40px;
+.materia[data-rendida=\"true\"][data-habilitada=\"true\"] {
+  background: #393;
+  color: white;
 }
